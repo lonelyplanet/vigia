@@ -10,6 +10,7 @@ module Vigia
         require "#{ __dir__ }/spec/support/utils"
         require "#{ __dir__ }/spec/support/shared_examples/skip_example"
         require "#{ __dir__ }/spec/support/shared_examples/apib_example"
+        require "#{ __dir__ }/spec/support/shared_examples/basic_example"
       end
 
       private

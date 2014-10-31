@@ -24,7 +24,7 @@ module Vigia
     def validate(parameters)
       return if required_template_parameters.empty?
 
-      missing_parameters = required_template_parameters - valid_paremeters(parameters)
+      missing_parameters = required_template_parameters - valid_parameters(parameters)
 
       raise("Uri template #{ @uri_template } needs parameter/s #{ missing_parameters.join(',') }") unless missing_parameters.empty?
     end
@@ -35,7 +35,7 @@ module Vigia
 
     private
 
-    def valid_paremeters(parameters)
+    def valid_parameters(parameters)
       parameters.to_hash.delete_if{|_,v| v.nil? || v.empty? }.keys
     end
 
